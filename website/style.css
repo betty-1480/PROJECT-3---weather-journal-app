@@ -1,0 +1,118 @@
+body{
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    display: grid;
+    width: 80vw;
+    height: auto;
+    margin: auto;
+    grid-template-columns: 1fr;                 /* 2 columns*/        
+    grid-template-rows: 25vh 25vh 25vh 25vh 25vh;   /* 5 rows*/
+    grid-gap:5px;
+    grid-template-areas: "heading"
+                        "zipcode"
+                        "feeling"
+                        "gerateButton"
+                        "F";
+    background: #f23557;
+    color: #f0d43a;
+    border:2px solid rgb(red, green, blue);
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    }
+
+.holder{
+    display: flex;
+    flex-direction: row;
+}
+
+.headline {
+    grid-area: heading;
+    align-items: center;
+    justify-content: center;
+}
+
+.zip{
+    grid-area: zipcode;
+}
+.feel{
+    grid-area: feeling;
+}
+
+.title{
+    grid-area: F;
+    display: flex;
+    flex-direction: column;
+}
+.entry{
+    grid-area: gerateButton;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59, 74, 107, .4);
+}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    background:#22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button{
+    width: 400px;
+    height: 100px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    background:#22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
