@@ -1,0 +1,15 @@
+The whole flow of the Weather app and this should explain when to use which method -
+
+1. In the app.js, extract the user input from the UI makes the call to the Weather API to get the result.
+
+2. In the app_get, extract the temperature and other data you require from the API response.
+
+3. Then make a POST call from the app_post to the server.js file, putting in all the required data like date, temp, and feeling.
+
+4. In the server_post, save the data from the request in the projectData variable.
+
+5. After this, in the app_get file the part where you update the UI, make a call to the GET call to the server.js.
+
+6. In the server_post side, just send the projectData in response.
+
+7. Finally, when the GET call is complete in the app_update_UI, you can extract the values from the request body and update the UI.
