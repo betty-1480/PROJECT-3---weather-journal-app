@@ -1,6 +1,6 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = new Array();
-
+//projectData = new Array();
+projectData={};
 // Require Express to run server and routes
 const express=require('express');
 const app=express();
@@ -47,5 +47,6 @@ Make sure your POST route is setup to add each of these values with a key to pro
 app.post('/myPostRoute',callBack);
 function callBack(req,res){
     const dataFromClient={temp:req.body.temperature,date:req.body.date,feeling:req.body.userResponse};
-    projectData.push(dataFromClient);
+    //projectData.push(dataFromClient);
+    projectData = dataFromClient;
 }

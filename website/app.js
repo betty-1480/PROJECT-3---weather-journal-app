@@ -1,7 +1,7 @@
 /* Acquire API credentials from OpenWeatherMap website. 
 Use your credentials and the base url to create global variables */
 const baseURL='http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey='&appid=3d6b60394e438c89dfe398a1c31ef7d9';
+const apiKey='&appid=3d6b60394e438c89dfe398a1c31ef7d9&units=imperial';
 
 // Create a new date instance dynamically with JS
 const d = new Date();
@@ -55,9 +55,9 @@ const updateUI=async()=>{
     const request=await fetch('http://localhost:3000/myGetRoute')
     try{
             const dataFromServer=await request.json();
-            document.getElementById('date').innerHTML="Date:"+dataFromServer[dataFromServer.length-1].date;
-            document.getElementById('temp').innerHTML="Temperature:"+dataFromServer[dataFromServer.length-1].temp;
-            document.getElementById('content').innerHTML="Feeling:"+dataFromServer[dataFromServer.length-1].feeling;
+            document.getElementById('date').innerHTML="Date:"+dataFromServer.date;
+            document.getElementById('temp').innerHTML="Temperature:"+dataFromServer.temp;
+            document.getElementById('content').innerHTML="Feeling:"+dataFromServer.feeling;
     }catch(error){
         console.log(error);
     }
